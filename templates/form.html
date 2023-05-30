@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario para pedir una URL</title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 0;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		label {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color: #0077cc;
+			color: #fff;
+			padding: 10px;
+			font-size: 18px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #005ea6;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 20px 0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://picsum.photos/600/200" alt="Imagen de fondo">
+		<h1>Formulario para verificar una URL</h1>
+		<p>Por favor, introduce la URL que deseas verificar:</p>
+		<form method="POST" action="{{url_for('answer')}}">
+			<label for="url">URL:</label>
+			<input type="text" id="url" name="url" required>
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+</body>
+</html>
