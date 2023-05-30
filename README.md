@@ -7,7 +7,7 @@ Web api that detects malicious urls, using a deeplearning model
 
 1- Clone this repository
 
-2- Install requirements.txt
+2- Install requirements.txt ```pip install -r requirements.txt```
 
 3- Run main.py
 
